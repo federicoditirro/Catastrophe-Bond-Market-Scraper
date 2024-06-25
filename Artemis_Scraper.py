@@ -12,8 +12,6 @@ The output excel file will contain data that can be extracted from the transacti
 If a file with the same name already exists, it will overwrite the information contained in the file, otherwise it will create a new file.
 Make sure the excel file is not open while code is running, or it will return a permission error.
 
-To run the code, you need to have on your local computer (ex in desktop) the "Pricing_Chart" file with a sheet Called "All_transaction"
-IMPORTANT: Before running, install the relevant modules (bs4, selenium, openpyxl) by running "pip install"
 
 """
 
