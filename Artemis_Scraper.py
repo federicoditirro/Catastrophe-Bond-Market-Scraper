@@ -4,15 +4,6 @@ Created by Federico Di Tirro;
 @author: wb593691
 Last Version: 06/01/2024
 
-
-Instructions for use: 
-This is a code to scrape Catastrophe Bond Transaction data from the Artemis Directory (https://www.artemis.bm/deal-directory/).
-The code will open Chrome browser, scrape the Artemis deal directory for a specified number of transactions (see voice "links" below) and return output in an excel file called Artemis_Scraper 
-The output excel file will contain data that can be extracted from the transactions on Artemis. 
-If a file with the same name already exists, it will overwrite the information contained in the file, otherwise it will create a new file.
-Make sure the excel file is not open while code is running, or it will return a permission error.
-
-
 """
 
 from bs4 import BeautifulSoup
@@ -450,7 +441,7 @@ if os.path.exists(filename):
         ws = wb[sheet_name]
         for row in reversed(range(1, ws.max_row + 1)):
             cell_value = ws.cell(row=row, column=1).value
-            deal_closed = ws.cell(row=row, column=18).value  # Assuming column R is the 18th column
+            deal_closed = ws.cell(row=row, column=18).value  
             if cell_value and deal_closed == 1:
                 last_deal_name = re.split(r'\s+Class', cell_value.strip())[0]
                 original_last_row = row
@@ -527,8 +518,7 @@ for index, link in enumerate(links):
             
         # Collect all the informaftion in the bullet points from <li> tags in a list
         data_texts = [data.text for data in soup.find_all("li")]
-        deal_info = data_texts#[-100:]                                              # Use the [-100:] to limit the number of characters retrieved for ease of running code
-    
+        deal_info = data_texts#[-100:]                                              
         for text in deal_info:
             if "Issuer:" in text:
                 Issuer = text.split("Issuer:")[1].strip()
