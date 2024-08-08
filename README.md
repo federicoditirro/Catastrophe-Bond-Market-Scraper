@@ -3,4 +3,4 @@ The data is then returned in an excel sheet (Transactions_Chart).
 If the Transactions_Chart file already exists, the code will only open new deals and update the excel sheet by adding new rows below it with transactions that have not been scraped yet (if there are any).
 If it does not exist, the code will create a sheet with that name and scrape the last 1000 transactions on the Artmeis directory. 
 
-The Pricing_Chart file performs regressions of spread on expected loss based on a set number of parameters.
+The Pricing_Chart file shows regressions of spread on expected loss based on a set number of parameters.
