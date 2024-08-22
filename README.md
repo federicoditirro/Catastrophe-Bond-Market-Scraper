@@ -34,7 +34,7 @@ Before running the scraper, ensure that the necessary Python modules are install
 
 3. **Set Up the Working Directory**
 
-The script uses a hybrid approach to determine the working directory:
+   The script uses a hybrid approach to determine the working directory:
 
 - **Default Directory**: You can specify a default working directory in a `config.ini` file. Create a `config.ini` file in the root of the project directory with the following structure:
 
