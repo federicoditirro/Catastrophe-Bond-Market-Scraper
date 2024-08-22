@@ -17,11 +17,25 @@ from collections import OrderedDict
 import os
 import re
 import datetime
+import configparser
 
 
+# Read the configuration file
+config = configparser.ConfigParser()
+config.read('config.ini')
 
-# Specify the path to the new working directory
-directory = r"WriteHereYourDirectory" 
+# Check if working_directory is specified in the config file
+if 'Settings' in config and 'working_directory' in config['Settings']:
+    directory = config['Settings']['working_directory']
+    use_default = input(f"Default directory is set to: {directory}. Do you want to use it? (y/n): ").strip().lower()
+
+    if use_default != 'y':
+        directory = input("Please enter the path to the working directory: ")
+else:
+    # Prompt user for the working directory if not in config
+    directory = input("Please enter the path to the working directory: ")
+
+# Change the working directory
 os.chdir(directory)
 print(f"Current working directory: {os.getcwd()}")
 
