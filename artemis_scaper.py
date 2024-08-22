@@ -20,8 +20,8 @@ import datetime
 
 
 
-# Specify the path to the new working directory & Change the current working directory
-directory = r"C:\Users\wb593691\Downloads" 
+# Specify the path to the new working directory
+directory = r"WriteHereYourDirectory" 
 os.chdir(directory)
 print(f"Current working directory: {os.getcwd()}")
 

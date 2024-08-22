@@ -32,6 +32,14 @@ Before running the scraper, ensure that the necessary Python modules are install
    ```
    This will install all the required libraries listed in the `requirements.txt` file.
 
+3. **Specify the path of the working directory**
+
+    To finish the set-up, change the working directory in the `artemis_scaper.py` script.
+    Line 24, variable directory:
+    ```python
+   directory = r"WriteHereYourDirectory" 
+   ```
+
 ## Usage
 ### Running the Scraper
 To run the scraper, simply execute the `artemis_scraper.py` script:
