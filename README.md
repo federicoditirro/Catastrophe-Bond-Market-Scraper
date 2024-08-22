@@ -30,11 +30,11 @@ Before running the scraper, ensure that the necessary Python modules are install
    ```bash
    pip install -r requirements.txt 
    ```
-   This will install all the required libraries listed in the requirements.txt file.
+   This will install all the required libraries listed in the `requirements.txt` file.
 
 ## Usage
 ### Running the Scraper
-To run the scraper, simply execute the scraper.py script:
+To run the scraper, simply execute the `artemis_scraper.py` script:
 
 ```bash
 python artemis_scraper.py
@@ -43,15 +43,16 @@ python artemis_scraper.py
 The script will begin scraping the Artemis Deal Directory, extracting the specified data points from each deal article.
 
 ### Output
-The scraped data will be automatically saved to an Excel file named Transactions_Chart.xlsx. The scraper behaves as follows:
+The scraped data will be automatically saved to an Excel file named `Transactions_Chart.xlsx`. The scraper behaves as follows:
 
-If the Transactions_Chart.xlsx file already exists, the code will only open new deals and update the Excel sheet by adding new rows with transactions that have not been scraped yet (if any).
-If the Transactions_Chart.xlsx file does not exist, the code will create the file and scrape the last 1000 transactions from the Artemis directory.
-Additionally, the Pricing_Chart.xlsx file shows regressions of spread on expected loss based on a set number of parameters.
+If the `Transactions_Chart.xlsx` file already exists, the code will only open new deals and update the Excel sheet by adding new rows with transactions that have not been scraped yet (if any).
+If the `Transactions_Chart.xlsx` file does not exist, the code will create the file and scrape the last 1000 transactions from the Artemis directory.
+Additionally, the `Pricing_Chart.xlsx` file shows regressions of spread on expected loss based on a set number of parameters.
 
-## Customization
-### Specifying Data Points
-If you want to customize which data points are extracted, you can modify the scraper.py script. Locate the section where data is parsed and add or remove fields according to your needs.
+## Customisation
+
+### Specifying Data Points
+If you want to customize which data points are extracted, you can modify the `artemis_scraper.py` script. Locate the section where data is parsed and add or remove fields according to your needs.
 
 ## License
 This project is licensed under the MIT License. See the **LICENSE** file for more details.
