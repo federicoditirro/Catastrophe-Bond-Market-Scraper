@@ -32,13 +32,22 @@ Before running the scraper, ensure that the necessary Python modules are install
    ```
    This will install all the required libraries listed in the `requirements.txt` file.
 
-3. **Specify the path of the working directory**
+### 3. Set Up the Working Directory
 
-    To finish the set-up, change the working directory in the `artemis_scaper.py` script.
-    Line 24, variable directory:
-    ```python
-   directory = r"WriteHereYourDirectory" 
-   ```
+The script uses a hybrid approach to determine the working directory:
+
+- **Default Directory**: You can specify a default working directory in a `config.ini` file. Create a `config.ini` file in the root of the project directory with the following structure:
+
+  ```ini
+  [Settings]
+  working_directory = /path/to/your/default/directory
+  ```
+
+  Replace /path/to/your/default/directory with the actual path to your desired default directory.
+
+- **User prompt**: If the `config.ini` file is not found or if you prefer to use a different directory, the script will prompt you to enter the working directory when it runs.
+The script will change the working directory based on your input or the default provided in the `config.ini`
+
 
 ## Usage
 ### Running the Scraper
@@ -61,6 +70,9 @@ Additionally, the `Pricing_Chart.xlsx` file shows regressions of spread on expec
 
 ### Specifying Data Points
 If you want to customize which data points are extracted, you can modify the `artemis_scraper.py` script. Locate the section where data is parsed and add or remove fields according to your needs.
+
+### Examples
+You can look at a customizable example under the `examples` folder
 
 ## License
 This project is licensed under the MIT License. See the **LICENSE** file for more details.
