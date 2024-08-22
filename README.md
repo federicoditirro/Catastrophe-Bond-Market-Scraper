@@ -32,7 +32,7 @@ Before running the scraper, ensure that the necessary Python modules are install
    ```
    This will install all the required libraries listed in the `requirements.txt` file.
 
-### 3. Set Up the Working Directory
+3. **Set Up the Working Directory**
 
 The script uses a hybrid approach to determine the working directory:
 
